@@ -1,0 +1,76 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+Prediction
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>🍀Prediction🍀</b></h1>
+ </div>
+        </div>
+        <div class="row ">
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+
+                    <h5><b>Why is it necessary to detect disease in plant ?</b></h5>
+                    <p>Detecting plant diseases early is crucial for the health and growth of plants. Researchers have found gaps in our understanding, and they're working to make it easier to spot diseases even before obvious symptoms show up. Identifying diseases correctly is a big part of a plant expert's training. If we don't know exactly what's causing the disease, trying to control it could be a waste of time and money, and it might even make things worse. So, getting the diagnosis right is really important to save plants from further damage.
+                    </p>
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;"><img
+                        src="https://floweraura-blog-img.s3.ap-south-1.amazonaws.com/Plants+Dec-19-Dec-20/water-the-soil-of-plants.jpg"
+                        height="300" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn">Choose File</label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+
+                        <h6 class="text-center mb-4 text-muted">
+                            Simply upload your plant's leaf image.
+                        </h6>
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">Predict</button></a>
+                        </center>
+                    </form>
+
+                </div>
+            </div>
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow rounded-lg" style="height: 95%;">
+                    <h5><b>Prevent Plant Disease follow below steps:</b></h5>
+                    <ol>
+                        <li>Make sure garden area is neat and tidy to avoid diseases.</li>
+                        <li>Use fertilizers to give plants the nutrients they need.</li>
+                        <li>Look closely at plants before buying to make sure they're healthy.</li>
+                        <li>Wait until the soil is warm before planting anything.</li>
+                        <li>Move your crops around in the garden to keep it healthy.</li>
+                        <li>Make sure there's enough space around your plants for air to move.</li>
+                        <li>Cut off any parts of the plant that don't look healthy.</li>
+                    </ol>
+                    <a target="_blank" href="https://extension.missouri.edu/publications/mg13"
+                        class="mx-2"><button type="button" class="btn btn-outline-success">More info</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}

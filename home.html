@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+  body{
+    background: url(https://miro.medium.com/v2/resize:fit:1100/format:webp/1*eFa8Fg7n_JYX7fiHGS2lUg.jpeg);
+    overflow-x: hidden;
+  }
+  @media only screen and (max-width: 830px) {
+    .laptop{
+      display: none;
+    }
+  }
+  @media (min-width:830px) and (max-width: 1536px){
+    .mobile{
+      display: none;
+    }
+  }
+</style>
+
+<div class="row mb-5 text-center text-white laptop">
+    <div class="col-lg-10 mx-auto">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7EAsJW7A4OXI5MMCiHPdHLIYikgwSH8HQlVy7mfAPgnMI7OXQuId1ijfQiEfHKymumiA&usqp=CAU" width="200" height="200">
+        <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: black;"><b><i>Plant Disease
+          Detection</i> </b></h1>
+    </div>
+</div>
+
+<center class="laptop">
+    <a href="/index">
+    <button class = "bttn-pill bttn-lg btn-success"><b style="color: black;">Predict</b></button>
+</a>
+</center>
+<div class="row p-3 laptop">
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCzh16X9b7bLWkNjXCClTZdlPi1tLzenpF4w&usqp=CAU" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Grape</p></center>
+        </div>
+    </div>
+    <div class="col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+          <img src="https://www.gardeningknowhow.com/wp-content/uploads/2017/08/citrus.jpg" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Orange</p></center>
+        </div>
+    </div>
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1OLQ7YM9VMGR6-R75qbqxeeqcq6lHl5oDDw&usqp=CAU" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Peach</p></center>
+        </div>
+    </div>
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+          <img src="https://media.istockphoto.com/id/480931380/photo/bell-pepper.jpg?b=1&s=612x612&w=0&k=20&c=SRy6FJlY6kmbdicXFdi4weGEwjxGzCrlUvhsoS7BKsA=" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Pepper Bell</p></center>
+        </div>
+    </div>
+</div>
+<div class="row p-3 laptop">
+  <div class="col">
+    <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+        <img src="https://media.istockphoto.com/id/626122442/photo/ripening-raspberries-on-the-vine.jpg?s=612x612&w=0&k=20&c=J6kGg7xAnfOEbz8tETdyOmyNSU0gH2RL8pyUgNtVDao=" width="200" height="200">
+        <center><p class="lead" style="font-weight: 500;color: black;">Raspberry</p></center>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+          <img src="https://www.thespruce.com/thmb/BIWD_nzuOuEmYnU26i7gr1osABg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/top-tomato-growing-tips-1402587-11-c6d6161716fd448fbca41715bbffb1d9.jpg" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Tomato</p></center>
+        </div>
+    </div>
+  <div class=" col">
+    <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+        <img src="https://www.thespruce.com/thmb/l-Q7qfnp6bc_XTYSgXW33gXjmzI=/3308x0/filters:no_upscale():max_bytes(150000):strip_icc()/growing-different-types-of-squash-1403489-hero-2dcf854c0d504d88be3382856e3d10be.jpg" width="200" height="200">
+        <center><p class="lead" style="font-weight: 500;color: black;">Squash</p></center>
+      </div>
+  </div>
+  <div class=" col">
+    <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/RU/QF/TG/11753892/intro-1625599097-500x500.jpg" width="200" height="200">
+        <center><p class="lead" style="font-weight: 500;color: black;">Corn</p></center>
+      </div>
+  </div>
+</div>
+
+<div class="row p-3 laptop">
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/348380295/MM/VC/OM/13249998/organic-fresh-potato-500x500.jpg" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Potato</p></center>
+        </div>
+    </div>
+    
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOD_8rpdHpiuKKV5Rxcuh-N3KFUCz72on-jA&usqp=CAU" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Soybean</p></center>
+        </div>
+    </div>
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+        <img src="https://www.shutterstock.com/image-photo/autumn-day-rural-garden-frame-600nw-1798373137.jpg" width="200" height="200">
+        <center><p class="lead" style="font-weight: 500;color: black;">Apple</p></center>
+      </div>
+  </div>
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 78%;height: 88%;">
+  
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWibpAmye0DuPRoWK_BEUXIrlMoHIgcjcBWg&usqp=CAU" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Cherry</p></center>
+        </div>
+    </div>
+</div>
+
+<center class="laptop">
+<div class="row p-3">
+    <div class=" col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 38%;height: 88%;">
+          <img src="https://www.thespruce.com/thmb/X49OaQM4f-JuhqOoXrl8nip1tIk=/5400x0/filters:no_upscale():max_bytes(150000):strip_icc()/how-to-grow-strawberries-from-seed-2539934-01-73c138a5c3454c41b285a56c9807ad01.jpg" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Strawberry</p></center>
+        </div>
+    </div>
+    <div class="col">
+      <div class="p-3 bg-white shadow rounded-lg" style="width: 38%;height: 88%;">
+  
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoeed0B2NqPVyCFOvQ7_R59s6zLq7PtvkltA&usqp=CAU" width="200" height="200">
+          <center><p class="lead" style="font-weight: 500;color: black;">Blueberry</p></center>
+        </div>
+    </div>
+</div>
+</center>
+
+{% endblock body %}
